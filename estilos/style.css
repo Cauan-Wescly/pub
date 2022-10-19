@@ -134,12 +134,6 @@ header {
     align-items: center;
 
     width: 100%;
-    /* tô tendo problemas com o INHERIT das children. Ao colocar max-width, os itens não se separam porque a PICTURE não está ficando com display: flex; [*fixed] */
-
-    /* [*]Atualização: o space-between não estava surtindo efeito pois não tem espaço pros itens se separarem, já que o tamanho deles está sendo baseado em PORCENTAGEM. Eles, somados, estão tomando 100% da largura disponivel, então space-between não surte efeito. */
-
-    /* não é necessário max-width neste projeto, pois a intenção é que o fundo realmente tome todo o espaço disponível por conta dos tamanhos em porcentagem */
-    /* max-width: 720px; */
     height: 100vh;
 
     padding: 0 32px;
@@ -188,7 +182,6 @@ header {
 
 .header__img {
     width: 100%;
-    /* there's no height cap because the whole background is white, so the image won't bother by overflowing */
     height: 100%;
 }
 
@@ -267,10 +260,6 @@ header {
     width: 50%;
 }
 
-.section__img {
-    /* width: 100%; */
-}
-
 .section__img--border {
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -281,11 +270,6 @@ header {
 FEATURES
 
 */
-
-/* #features {
-    background-color: lightskyblue;
-} */
-
 
 .feature__wrapper {
     display: flex;
@@ -304,9 +288,6 @@ FEATURES
     align-items: flex-start;
 
     width: calc(100% / 3);
-    /* max-width: 300px; */
-
-    /* border: 1px solid black; */
 
     padding: 32px 8px;
     margin-top: 16px;
@@ -316,7 +297,6 @@ FEATURES
 .section__icon--wrapper {
     display: flex;
     padding: 20px;
-    /* width: 24px; */
 }
 
 .icon__border {
@@ -454,7 +434,6 @@ PRICING
     border-bottom: 2px solid rgb(226, 232, 240);
 
     width: 100%;
-    /* max-width: 320px; */
 
     padding: 32px;
 }
