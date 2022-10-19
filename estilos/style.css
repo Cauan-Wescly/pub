@@ -1,0 +1,740 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 80px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1285px;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    border-radius: 9999px;
+
+    color: snow;
+    background-color: #6415FF;
+
+    padding: 16px 32px;
+    width: 10rem;
+    margin: 8px 8px 8px 0;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.purple {
+    color: #6415FF;
+}
+
+.snow {
+    color: snow !important;
+}
+
+/* 
+
+    NAVIGATION BAR
+
+*/
+
+nav {
+    display: flex;
+    height: 100px;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+
+    margin: 0 auto;
+}
+
+.nav__logo {
+    height: 40px;
+}
+
+.nav__redirect {
+    display: flex;
+    align-items: center;
+}
+
+.nav__redirect--text {
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.nav__links {
+    display: flex;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav__link {
+    margin-right: 50px;
+}
+
+.nav__link--login {
+    margin-left: 50px;
+    margin-right: 15px;
+}
+
+.nav__link--priority {
+    color: snow;
+    background-color: #6415FF;
+    
+    border: 2px solid #6415FF;
+    border-radius: 9999px;
+    padding: 12px 32px;
+}
+
+/* 
+
+    HEADER
+
+*/
+
+header {
+    height: calc(100vh - 100px);
+}
+
+.header__container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+    width: 100%;
+    /* tô tendo problemas com o INHERIT das children. Ao colocar max-width, os itens não se separam porque a PICTURE não está ficando com display: flex; [*fixed] */
+
+    /* [*]Atualização: o space-between não estava surtindo efeito pois não tem espaço pros itens se separarem, já que o tamanho deles está sendo baseado em PORCENTAGEM. Eles, somados, estão tomando 100% da largura disponivel, então space-between não surte efeito. */
+
+    /* não é necessário max-width neste projeto, pois a intenção é que o fundo realmente tome todo o espaço disponível por conta dos tamanhos em porcentagem */
+    /* max-width: 720px; */
+    height: 100vh;
+
+    padding: 0 32px;
+    margin: 0 auto;
+}
+
+.header__description {
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+}
+
+.header__title {
+    font-size: 48px;
+}
+
+.header__para {
+    font-size: 18px;
+    margin: 32px 0;
+}
+
+.header__subscription--wrapper {
+    position: relative;
+    max-width: 28rem;
+}
+
+.header__subscription {
+    width: 100%;
+
+    padding: 20px 192px 20px 32px;
+    border-radius: 9999px;
+}
+
+.header__btn {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.header__img--wrapper {
+    width: 60%;
+}
+
+.header__img {
+    width: 100%;
+    /* there's no height cap because the whole background is white, so the image won't bother by overflowing */
+    height: 100%;
+}
+
+.header__customers--wrapper {
+    margin-top: 80px;
+}
+
+.header__customers--title {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.header__customers {
+    width: 100%;
+    margin-top: 1rem;
+    padding-right: 8rem;
+
+    opacity: 0.5;
+}
+
+/* 
+
+    SECTIONS
+
+*/
+
+.section__container {
+    display: flex;
+    align-items: center;
+}
+
+.section__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section__description--center {
+    align-items: center;
+}
+
+.section__description--width {
+    width: 50%;
+}
+
+.section__overtitle,
+.section__title,
+.section__para {
+    margin-bottom: 16px;
+}
+
+.section__overtitle {
+    font-weight: 700;
+}
+
+.section__title {
+    font-size: 48px;
+}
+
+.section__title--width {
+    max-width: 580px;
+}
+
+.section__para {
+    font-size: 18px;
+    font-weight: 500;
+
+    color: rgb(124, 139, 161);
+
+    max-width: 500px;
+    line-height: 1.625;
+}
+
+.section__img--wrapper {
+    width: 50%;
+}
+
+.section__img {
+    /* width: 100%; */
+}
+
+.section__img--border {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+/* 
+
+FEATURES
+
+*/
+
+/* #features {
+    background-color: lightskyblue;
+} */
+
+
+.feature__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding: 0 16px;
+
+    width: 100%;
+    max-width: 1000px;
+}
+
+.feature, .step {
+    display: flex;
+    align-items: flex-start;
+
+    width: calc(100% / 3);
+    /* max-width: 300px; */
+
+    /* border: 1px solid black; */
+
+    padding: 32px 8px;
+    margin-top: 16px;
+}
+
+
+.section__icon--wrapper {
+    display: flex;
+    padding: 20px;
+    /* width: 24px; */
+}
+
+.icon__border {
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: 9999px;
+}
+
+.highlight__icon {
+    width: 24px;
+}
+
+.highlight__description {
+    padding: 8px 0 0 16px;
+}
+
+.highlight__title {
+    color: #243E63;
+
+}
+
+.highlight__para {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+
+    color: rgb(124, 139, 161);
+    
+    margin-top: 1rem;
+}
+
+/* STEPS */
+
+.step {
+    padding: 0;
+    width: 100%;
+}
+
+.steps__container {
+    margin-left: 64px;
+}
+
+.step__icon {
+    color: #CBD5E0;
+
+    font-size: 36px;
+    font-weight: bold;
+
+    padding: 0;
+}
+
+.step__description {
+    margin-left: 24px;
+    max-width: 320px;
+}
+
+.step__title {
+    color: #243E63;
+}
+
+.step__para {
+    color: #718096;
+    font-size: 14px;
+    line-height: 2;
+
+    margin-top: 12px;
+}
+
+/* 
+
+    VALUES
+
+*/
+
+.values__highlight {
+    display: flex;
+}
+
+.display__icon {
+    background-color: #9AE6B4;
+    border-radius: 50px;
+
+    padding: 20px;
+}
+
+/* 
+
+
+PRICING
+
+
+*/
+
+.plans {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.plan {
+    position: relative;
+    border: 1px solid rgba(211, 211, 211, 0.35);
+    border-radius: 10px;
+
+    margin-top: 64px;
+
+    width: calc(100% / 3);
+    height: 580px;
+}
+
+.plan:not(:last-child) {
+    margin-right: 32px;
+}
+
+.plan,
+.plan__title,
+.plan__description,
+.plan__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.plan__title {
+    padding: 32px 0;
+}
+
+.plan__price {
+    font-size: 48px;
+
+    margin: 4px 0;
+}
+
+.plan__description {
+    border-top: 2px solid rgb(226, 232, 240); 
+    border-bottom: 2px solid rgb(226, 232, 240);
+
+    width: 100%;
+    /* max-width: 320px; */
+
+    padding: 32px;
+}
+
+.plan__benefit {
+    margin-top: 20px;
+}
+
+.plan__bottom {
+    padding: 32px 64px;
+}
+
+.plan__type, 
+.plan__price, 
+.plan__client-type {
+    color: #1A202C;
+}
+
+.plan__type, 
+.plan__price, 
+.plan__duration, 
+.plan__client-type {
+    font-weight: 700;
+    line-height: 1.625;
+}
+
+.plan__type, 
+.plan__client-type, 
+.plan__benefit {
+    font-size: 20px;
+}
+
+.plan__duration,
+.plan__benefit {
+    color: #A0AEC0;
+
+    font-size: 16px;
+}
+
+/* SPECIFIC */
+
+
+.plan__personal--hat {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan__personal--btn {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan__business {
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
+.plan__description--buss {
+    border-color: rgb(102 126 234);
+}
+
+.plan__title--buss {
+    color: snow;
+}
+
+.plan__business--btn {
+    color: #6415FF;
+    background-color: snow;
+}
+
+.plan__enterprise--hat {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan__enterprise--btn {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+/* 
+
+    TESTIMONIALS
+
+*/
+
+.section__testimonial--description {
+    padding-left: 64px;
+}
+
+.testimonial {
+    margin-top: 40px;
+}
+
+.testimonial__rating {
+    color: rgb(246, 173, 85);
+    font-size: 20px;
+}
+
+.fa-star {
+    margin-right: 4px;
+}
+
+.testimonial__title {
+    margin-top: 16px;
+    color: #243E63;
+}
+
+.testimonial__para {
+    color: #4A5568;
+    margin: 16px 0 40px 0;
+    margin-left: 0;
+}
+
+.testimonial__profile {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial__id {
+    margin-left: 24px;
+}
+
+.testimonial__name {
+    color: #243E63;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.testimonial__role {
+    color: #7C8BA1;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.testimonial__img--wrapper {
+    max-width: 80px;
+}
+
+.testimonial__img {
+    border-radius: 50px;
+}
+
+/* 
+
+    POP UP
+
+*/
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+
+    width: 100%;
+    height: 280px;
+
+    background-color: rgb(100, 21, 255);
+}
+
+.popup__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.popup__title {
+    font-size: 30px;
+    color: #F7FAFC;
+
+    max-width: 480px;
+    margin-right: 100px;
+}
+
+.btn__get-started {
+    background-color: #F56565;
+    color: rgb(237, 242, 247);
+}
+
+.btn__contact-us {
+    border: 1px solid rgb(160, 174, 192);
+}
+/* FOOTER */
+
+footer {
+    background-color: #6415ff;
+
+    margin-top: 96px;
+}
+
+.footer__link--title {
+    color: #F7FAFC;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-bottom: 24px;
+}
+
+.footer__links--wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 64px;
+}
+
+.footer__link {
+    display: inline-block;
+    color: #F7FAFC;
+
+    font-size: 14px;
+    font-weight: 500;
+    
+    margin: 12px 0 4px 0;
+}
+
+.credentials__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 2px solid rgb(116, 44, 255);
+
+    padding-top: 64px;
+}
+
+.footer__logo--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo {
+    max-width: 32px;
+}
+
+.footer__logo--title {
+    font-size: 20px;
+    color: #F7FAFC;
+    margin-left: 8px;
+    font-weight: 900;
+}
+
+.footer__copyright {
+    font-size: 16px; 
+    color: #CBD5E0;
+    font-weight: 500;
+}
+
+.footer__social--container {
+    display: flex;
+}
+
+.footer__social--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 32px;
+    width: 32px;
+
+    background-color: snow;
+    border-radius: 15px;
+}
+
+.footer__social--icon {
+    margin-left: 16px;
+}
