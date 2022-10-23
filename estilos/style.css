@@ -890,7 +890,8 @@ PRICING
 }
 
 .popup__buttons {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .btn__get-started,
@@ -942,7 +943,8 @@ footer {
     font-size: 16px;
     font-weight: 700;
 
-    margin-bottom: 24px;
+    /* margin-bottom: 18px; */
+    margin-top: 20px;
 }
 
 .footer__links--wrapper {
@@ -959,7 +961,7 @@ footer {
     font-size: 14px;
     font-weight: 500;
     
-    margin: 12px 0 4px 0;
+    margin: 4px 0 12px 0;
 }
 
 .credentials__container {
@@ -1166,8 +1168,14 @@ footer {
         width: 100%;
     }
 
-    .footer__container {
+    .footer__links--wrapper {
         flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer__links {
+        width: calc(100% / 3);
+        text-align: center;
     }
 
     .credentials__container {
@@ -1196,7 +1204,8 @@ footer {
     }
 
     .section__description--width {
-        width: 448px;
+        width: 100%;
+        max-width: 448px;
     }
 
     .section__overtitle,
@@ -1252,6 +1261,10 @@ footer {
         min-width: 365px;
     }
 
+    .plans {
+        padding: 0 24px;
+    }
+
     .testimonial {
         text-align: center;
     }
@@ -1264,9 +1277,14 @@ footer {
         margin: 0;
     }
 
+    .popup__wrapper {
+        width: 100%;
+    }
+
     .popup__title {
-        font-size: 24px;
+        width: 100%;
         max-width: 422px;
+        font-size: 24px;
     }
 
     .popup__buttons {
