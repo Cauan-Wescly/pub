@@ -209,7 +209,7 @@ nav {
     max-width: 1250px;
     height: 100%;
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 0 32px;
 }
 
@@ -1054,6 +1054,9 @@ footer {
 
     .btn__menu {
         display: block;
+        position: absolute;
+        top: 35px;
+        right: 35px;
     }
 
     .nav__links {
