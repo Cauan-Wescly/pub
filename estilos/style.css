@@ -290,7 +290,7 @@ nav {
 */
 
 header {
-    height: calc(100vh - 100px);
+    /* height: calc(100vh - 100px); */
     animation: left_slide 1000ms ease;
 }
 
@@ -304,7 +304,7 @@ header {
     /* max-width: 720px; */
     height: 100vh;
 
-    padding: 0 32px;
+    padding: 80px 32px 0 32px;;
     margin: 0 auto;
 }
 
@@ -335,7 +335,7 @@ header {
 
 .header__subscription {
     width: 100%;
-    padding: 20px 192px 20px 32px;
+    padding: 20px 32px;
 
     font-weight: 500;
     font-size: 16px;
