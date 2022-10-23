@@ -469,14 +469,6 @@ FEATURES
 
 */
 
-/* #features {
-    background-color: lightskyblue;
-} */
-
-#features {
-
-}
-
 .feature__wrapper {
     display: flex;
     flex-wrap: wrap;
