@@ -7,22 +7,38 @@
     <title>TReact</title>
     <link rel="stylesheet" href="estilos/style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="menu.js"></script>
 </head>
 <body>
     <section id="landing">
         <nav>
             <div class="nav__container">
-                <a href="#" class="nav__redirect"><img src="imagens/T_nav-icon.svg" alt="" class="nav__logo"><p class="nav__redirect--text">Treact</p>
+                <a href="#" class="nav__logo--wrapper"><img src="imagens/T_nav-icon.svg" alt="" class="nav__logo"><span class="nav__logo--text .logo__hover-effect--purple">Treact</span>
                 </a>
 
                 <ul class="nav__links">
-                    <li><a href="#" class="nav__link">About</a></li>
-                    <li><a href="#" class="nav__link">Blog</a></li>
-                    <li><a href="#" class="nav__link">Pricing</a></li>
-                    <li><a href="#" class="nav__link">Contact Us</a></li>
-                    <li ><a href="#" class="nav__link--login">Login</a></li>
+                    <li><a href="#" class="nav__link link__hover-effect link__hover-effect--purple">About</a></li>
+                    <li><a href="#" class="nav__link link__hover-effect link__hover-effect--purple">Blog</a></li>
+                    <li><a href="#" class="nav__link link__hover-effect link__hover-effect--purple">Pricing</a></li>
+                    <li><a href="#" class="nav__link link__hover-effect link__hover-effect--purple">Contact Us</a></li>
+                    <li ><a href="#" class="nav__link--login link__hover-effect link__hover-effect--purple">Login</a></li>
                     <li><a href="#" class="nav__link--priority">Sign Up</a></li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()"><i class="fas fa-bars"></i></button>
+                    <div class="menu__backdrop">
+                        <div class="menu__btn--">
+                            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <ul class="menu__links">
+                            <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">About</a></li>
+                            <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">Blog</a></li>
+                            <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">Pricing</a></li>
+                            <li class="menu__list"><a class="menu__link" href="#" onclick="closeMenu()">Contact Us</a></li>
+                            <li class="menu__list"><a class="menu__link nav__link--priority" href="#" onclick="closeMenu()">Sign Up</a></li>
+                        </ul>
+                    </div>
             </div>
         </nav>
 
@@ -32,8 +48,8 @@
                     <h1 class="header__title">Beautiful React Templates <span class="purple">for you.</span></h1>
                     <p class="header__para">Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.</p>
                     <div class="header__subscription--wrapper">
-                        <input type="email" name="" id="" class="header__subscription">
-                        <button type="submit" class="btn header__btn">Get Started!</button>
+                        <input type="email" name="" id="" class="header__subscription" placeholder="Your E-mail Address">
+                        <a href=""><button class="btn header__btn btn__hover-effect">Get Started!</button></a>
                     </div>
                     <div class="header__customers--wrapper">
                         <h5 class="header__customers--title">OUR TRUSTED CUSTOMERS</h5>
@@ -120,12 +136,12 @@
         <section id="reassurance">
             <div class="container">
                 <div class="row">
-                    <div class="section__container">
+                    <div class="section__container column-reverse">
                         <div class="section__description section__description--width">
                             <p class="section__overtitle"><span class="purple">QUALITY WORK</span></p>
                             <h1 class="section__title section__title--width">Designed & Developed by <span class="purple">Professionals.</span></h1>
                             <p class="section__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <button class="btn">Learn More</button>
+                            <a href="" class="section__btn--link"><button class="btn reassurance__btn btn__hover-effect">Learn More</button></a>
                         </div>
                         <picture class="section__img--wrapper">
                             <img src="imagens/qualitywork-img.png" alt="" class="section__img section__img--border">
@@ -138,13 +154,14 @@
         <section id="steps">
             <div class="container">
                 <div class="row">
-                    <div class="section__container">
+                    <div class="section__container section__container--width">
                         <picture class="section__img--wrapper">
                             <img src="imagens/steps-img.png" alt="" class="section__img">
                         </picture>
                         <div class="steps__container section__description section__description--width">
                             <p class="section__overtitle"><span class="purple">STEPS</span></p>
                             <h1 class="section__title section__title--width">Easy to <span class="purple">Get Started</span>.</h1>
+                            <!-- <div class="steps__wrapper"> -->
                                 <div class="step">
                                     <span class="section__icon--wrapper step__icon">
                                       <div class="step__icon">01</div>
@@ -172,6 +189,7 @@
                                         <p class="step__para">Follow the instructions to setup and customize the template to your needs.</p>
                                     </div>
                                 </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -181,34 +199,28 @@
         <section id="values">
             <div class="container">
                 <div class="row">
-                    <div class="section__container">
+                    <div class="section__container column-reverse">
                         <div class="section__description section__description--width">
                             <p class="section__overtitle"><span class="purple">VALUES</span></p>
                             <h1 class="section__title section__title--width">We Always Abide by Our <span class="purple">Principles</span>.</h1>
                             <p class="section__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             <div class="values__highlight">
                                 <div class="value">
-                                    <span class="section__icon--wrapper step__icon">
-                                        <div class="display__icon"></div>
-                                      </span>
-                                      <div class="step__description">
-                                          <h2 class="step__title">Affordable</h2>
-                                          <p class="step__para">We promise to offer you the best rate we can - at par with the industry standard.
+                                    <div class="value__description">
+                                          <h2 class="value__title green">Affordable</h2>
+                                          <p class="value__para">We promise to offer you the best rate we can - at par with the industry standard.
                                         </p>
                                       </div>
                                 </div>
                                 <div class="value">
-                                    <span class="section__icon--wrapper step__icon">
-                                        <div class="display__icon"></div>
-                                      </span>
-                                      <div class="step__description">
-                                          <h2 class="step__title">Professionalism</h2>
-                                          <p class="step__para">We assure you that our templates are designed and created by professional designers.
+                                      <div class="value__description">
+                                          <h2 class="value__title salmon">Professionalism</h2>
+                                          <p class="value__para">We assure you that our templates are designed and created by professional designers.
                                         </p>
                                       </div>
                                 </div>
                             </div>
-                            <button class="btn">Learn More</button>
+                            <a href="" class="section__btn--link"><button class="btn values__btn btn__hover-effect">Learn More</button></a>
                         </div>
                         <picture class="section__img--wrapper">
                             <img src="imagens/values-img.svg" alt="">
@@ -246,7 +258,7 @@
                                 </span>
                             </div>
                             <div class="plan__bottom">
-                                <button class="btn plan__personal--btn">BUY NOW</button>
+                                <a href=""><button class="btn plan__btn plan__personal--btn">BUY NOW</button></a>
                             </div>
                         </div>
 
@@ -268,7 +280,7 @@
                                 </span>
                             </div>
                             <div class="plan__bottom">
-                                <button class="btn plan__business--btn">BUY NOW</button>
+                                <a href=""><button class="btn plan__btn plan__business--btn">BUY NOW</button></a>
                             </div>
                         </div>
 
@@ -291,11 +303,12 @@
                                 </span>
                             </div>
                             <div class="plan__bottom">
-                                <button class="btn plan__enterprise--btn">BUY NOW</button>
+                                <a href=""><button class="btn plan__btn plan__enterprise--btn">BUY NOW</button></a>
                             </div>
                         </div>
                     </div>
             </div>
+        </section>
 
             <section id="testimonials">
                 <div class="container">
@@ -335,14 +348,14 @@
         </section>
 
         <section class="getstarted">
-            <div class="container">
+            <div class="container popup__container">
                 <div class="row">
                     <div class="popup">
-                        <div class="popup__container">
+                        <div class="popup__wrapper">
                             <h5 class="popup__title">Developers all over the world are happily using Treact.</h5>
                             <div class="popup__buttons">
-                                <button class="btn btn__get-started">Get Started</button>
-                                <button class="btn btn__contact-us">Contact Us</button>
+                                <a href="#"><button class="btn btn__get-started">Get Started</button></a>
+                                <a href=""><button class="btn btn__contact-us">Contact Us</button></a>
                         </div>
                         </div>
                     </div>
@@ -352,43 +365,43 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="container footer__container">
             <div class="row">
                     <div class="footer__links--wrapper">
                         <ul class="footer__links">
                             <h5 class="footer__link--title">MAIN</h5>
-                            <li><a class="footer__link" href="#">Blog</a></li>
-                            <li><a class="footer__link" href="#">FAQs</a></li>
-                            <li><a class="footer__link" href="#">Support</a></li>
-                            <li><a class="footer__link" href="#">About Us</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Blog</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">FAQs</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Support</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">About Us</a></li>
                         </ul>
                         <ul class="footer__links">
                             <h5 class="footer__link--title">PRODUCT</h5>
-                            <li><a class="footer__link" href="#">Log In</a></li>
-                            <li><a class="footer__link" href="#">Personal</a></li>
-                            <li><a class="footer__link" href="#">Business</a></li>
-                            <li><a class="footer__link" href="#">Team</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Log In</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Personal</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Business</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Team</a></li>
                         </ul>
                         <ul class="footer__links">
                             <h5 class="footer__link--title">PRESS</h5>
-                            <li><a class="footer__link" href="#">Logos</a></li>
-                            <li><a class="footer__link" href="#">Events</a></li>
-                            <li><a class="footer__link" href="#">Stories</a></li>
-                            <li><a class="footer__link" href="#">Office</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Logos</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Events</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Stories</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Office</a></li>
                         </ul>
                         <ul class="footer__links">
                             <h5 class="footer__link--title">TEAM</h5>
-                            <li><a class="footer__link" href="#">Career</a></li>
-                            <li><a class="footer__link" href="#">Founders</a></li>
-                            <li><a class="footer__link" href="#">Culture</a></li>
-                            <li><a class="footer__link" href="#">Onboarding</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Career</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Founders</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Culture</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Onboarding</a></li>
                         </ul>
                         <ul class="footer__links">
                             <h5 class="footer__link--title">LEGAL</h5>
-                            <li><a class="footer__link" href="#">GDPR</a></li>
-                            <li><a class="footer__link" href="#">Privacy Policy</a></li>
-                            <li><a class="footer__link" href="#">Terms of Service</a></li>
-                            <li><a class="footer__link" href="#">Disclaimer</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">GDPR</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Privacy Policy</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Terms of Service</a></li>
+                            <li><a class="footer__link link__hover-effect link__hover-effect--white" href="#">Disclaimer</a></li>
                         </ul>
                     </div>
 
