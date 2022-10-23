@@ -148,11 +148,6 @@ button {
     opacity: 1;
 }
 
-/* .menu--open {
-    max-height: 100vh;
-    overflow: hidden;
-} */
-
 .menu__links {
     display: flex;
     flex-direction: column;
