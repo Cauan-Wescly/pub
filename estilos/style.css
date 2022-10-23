@@ -1065,7 +1065,8 @@ footer {
     }
 
     .header__description {
-        min-width: 512px;
+        max-width: 512px;
+        width: 100%;
     }
 
     .header__title {
@@ -1154,6 +1155,10 @@ footer {
 
         height: 132px;
         margin: 0 auto;
+    }
+
+    .header__img--wrapper {
+        width: 100%;
     }
 
     .header__btn {
