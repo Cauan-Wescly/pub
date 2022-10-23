@@ -140,7 +140,7 @@ button {
 .menu__btn--container {
     position: absolute;
     right: 35px;
-    top: 15px;
+    top: 35px;
 }
 
 .menu--open .menu__backdrop {
@@ -1054,10 +1054,9 @@ footer {
 
     .btn__menu {
         display: block;
-        position: absolute;
-        top: 35px;
-        right: 35px;
     }
+
+
 
     .nav__links {
         display: none;
